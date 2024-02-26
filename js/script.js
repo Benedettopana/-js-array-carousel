@@ -3,7 +3,6 @@ const itemsWrapper = document.querySelector('.items-wrapper');
 const topArrow = document.querySelector('.top');
 const botArrow = document.querySelector('.bot');
 
-topArrow.classList.add('hide');
 
 const images = [
   './assets/img/01.webp',
@@ -26,25 +25,23 @@ const itemsCollecion = document.getElementsByClassName('img');
 itemsCollecion[counterImg].classList.remove('hide');
 
 topArrow.addEventListener('click',function(){
-  botArrow.classList.remove('hide');
 
   itemsCollecion[counterImg].classList.add('hide');
   // itemsCollecion[counterImg--].classList.add('hide');
   counterImg--;
-  itemsCollecion[counterImg].classList.remove('hide');
-  if(counterImg === 0){
-    topArrow.classList.add('hide');
+  if(counterImg < 0){
+    counterImg = images.length - 1;
   }
+  itemsCollecion[counterImg].classList.remove('hide');
+
 });
 
 botArrow.addEventListener('click',function(){
-  topArrow.classList.remove('hide');
 
   itemsCollecion[counterImg++].classList.add('hide');
 
-  itemsCollecion[counterImg].classList.remove('hide');
-
-  if(counterImg === images.length-1){
-    botArrow.classList.add('hide');
+  if(counterImg > images.length - 1){
+    counterImg = 0;
   }
+  itemsCollecion[counterImg].classList.remove('hide');
 });
