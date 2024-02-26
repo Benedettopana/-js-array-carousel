@@ -1,0 +1,34 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.main-wrapper{
+  height: 100vh;
+  background-color: #454545;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.slider{
+  width: 70%;
+  height: 60%;
+  background-color: #FFF;
+
+}
+
+.items-wrapper{
+  height: 100%;
+}
+
+.items-wrapper img{
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.hide{
+  display: none;
+}
