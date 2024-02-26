@@ -16,6 +16,7 @@
   width: 70%;
   height: 60%;
   background-color: #FFF;
+  position: relative;
 
 }
 
@@ -31,4 +32,32 @@
 
 .hide{
   display: none;
+}
+
+.btn-arrow{
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  font-size: .6rem;
+  text-align: center;
+  line-height: 15px;
+  background-color: grey;
+  color: black;
+  position: absolute;
+  left: 50%;
+  transform: translateY(-50%);
+  transition: all .3s;
+}
+
+.btn-arrow:hover{
+  background-color: #FFF;
+}
+
+.btn-arrow.top{
+  top: 13px;
+  transform: translateY(-50%);
+}
+.btn-arrow.bot{
+  bottom: 0px;
+  transform: translateY(-50%);
 }
